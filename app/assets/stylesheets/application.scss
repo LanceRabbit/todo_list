@@ -1,0 +1,259 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/*=============normal setting============*/
+
+* {
+   /*border: solid 1px black;*/
+  font-family: 'Gochi Hand', cursive;
+}
+
+@font-face {
+  font-family: 'Gochi Hand', cursive;
+
+}
+
+@media screen and (min-width: 768px) {
+  .listbox {
+    width: 800px;
+    max-height: 1000px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+.listbox {
+    width: 400px;
+    /*max-height: 500px;*/
+  }
+}
+
+
+
+body {
+  /*background-color: #EDF4ED;*/
+  background-color: #2C2F36;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+}
+
+/*取消點點*/
+ul {
+  list-style: none;
+  padding: 0;
+}
+  
+/*影響之間的距離*/
+li  {
+  padding: 10px;
+}
+
+textarea {
+ border-radius: 10px;
+ resize:none;
+
+}
+
+
+/*===============index page===============*/
+
+.sticker {
+  width: 180px;
+  height: 40px;
+
+  background-color: white ;
+  opacity: 0.8;
+  border: solid 1px #D8D8D8;
+
+  transform: rotate(-30deg);
+  position: absolute;
+  left: -30px;
+
+  z-index: 1;
+}
+
+.listbox {
+/*  width: 800px;
+  max-height: 1000px;*/
+
+  border:solid 2px grey;
+  border-radius: 15px;
+  /*background-color: #F3FFBD;FFF2DB*/
+  /*background: linear-gradient(to bottom, #f3ffbd, white);*/
+  background-color: #FFF2DB;
+  
+
+  margin: 100px auto;
+  position: relative;
+  box-shadow: 3px 3px 8px rgba(0,0,0,.5);
+}
+.top_line {
+  width: 50%;
+  height: 10px;
+
+  background-color: #EFC7C2;
+
+  margin: 0 auto 30px auto;
+
+}
+
+
+.addbtn {
+  position: absolute;
+  margin: -20px 30px;
+  left: 10px;
+  a {
+    font-size:20px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .newbtn {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 10px;
+    letter-spacing: 2px;
+    background-color: #3e9fe0;
+    transition: 0.5s;
+    
+  /*right: 40px;*/
+  }
+  .newbtn:hover {
+      background-color: #1f80c1;
+    }
+
+}
+
+/*  //平移時間
+  transition: 0.5s
+  //滑鼠變得可以點選
+  cursor: pointer
+  //滑鼠滑入圖卡時
+  &:hover
+    //平移
+    transform: translate(-5px, -5px)*/
+
+.list {
+  margin: 60px 30px;
+  /*max-height: 550px;*/
+  overflow: scroll;
+  li > .detail {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f6f9a7;
+  overflow: hidden;
+  position: relative;
+/*  // bxx + tab
+  //內部的陰影 左右平移 上下平移 模糊 顏色
+  //*/
+  box-shadow: 4px 5px 10px rgba(black, 0.2) ;
+    transition: 0.5s;
+  }
+  li > .detail:hover {
+    transform: translate(-5px, -5px);
+  }
+
+
+}
+.actions {
+  position: absolute;
+  padding: 3px;
+  right: 0px;
+  top: 0px;
+  a {
+    text-decoration: none;
+    color: #dd0d0d;
+  }
+}
+
+.due_date {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+  a {
+    text-decoration: none;
+    color: #3196e2;
+  }
+  
+}
+
+.note {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+
+
+.line{
+/*  width: 95%;*/
+  height: 1.5px;
+  /*height: 10px;*/
+  border-bottom: 2px solid rgba(black, 0.2);
+  /*display: flex;*/
+}
+.itembar {
+  width: 95%;
+  height: 1.5px;
+
+  background-color: #DEE5DE;
+}
+
+/*================partial page==============*/
+.formbox {
+  /*margin: 100px auto;*/
+  position: relative;
+}
+
+.errorbox {
+  width: 400px;
+  height: 150px;
+  margin: 20px auto;
+  text-align: center;
+  border: solid 1px #EDF4ED;
+  color: red;
+}
+
+.errorlist {
+  list-style: none;
+  padding: 0;
+}
+
+.itembox {
+  width: 400px;
+  border-radius: 10px;
+  background-color: #FFF2DB;
+  box-shadow: 3px 3px 8px rgba(0,0,0,.5);
+  border: solid 2px grey;
+  margin: 100px auto;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 22px;
+}
+
+
+.itembox_btn {
+  margin: 10px;
+}

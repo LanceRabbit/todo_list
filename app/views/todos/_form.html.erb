@@ -1,0 +1,33 @@
+<div class="formbox">
+  <% if @todo.errors.any? %>
+    <div class="errorbox">
+      <ul class="errorlist">
+        <% @todo.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="itembox">
+    <%= form_for @todo do |f| %>
+      <%= f.label :title, 'Title' %>
+      <br>
+      <%= f.text_area :title %>
+      <br>
+      <%= f.label :due_date, 'Due Date' %>
+      <br>
+      <%= f.date_select :due_date %>
+      <br>
+      <%= f.label :note, 'Note' %>
+      <br>
+      <%= f.text_area :note %>
+      <br>
+      <div class="itembox_btn">
+        <%# button 這個變數，分別在 new.html.erb & edit.html.erb 中設定 %>
+        <%= f.submit button, class: 'btn btn-success' %>
+        <%= link_to 'BACK', :back, class: 'btn btn-default' %>
+      </div>
+    <% end %>
+  </div>
+</div>
